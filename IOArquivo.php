@@ -17,4 +17,24 @@ class IOArquivo
             die('Arquivo não encotrado!');
         }
     }
+
+    /**
+     * Implementa a escrita em arquivo
+     * recebe um array de objetos de usuario
+     * e grava no arquivo
+     */
+    public function writeFile(Array $arr)
+    {   
+        if (empty($arr)) {
+            echo 'Array vazio!';
+            return false;
+        }
+            
+        if (file_exists($this->filePath)) {
+            // grava uma string em um arquivo
+            file_put_contents($this->filePath,json_encode($arr));   
+            return true;
+        }
+
+    }
 }

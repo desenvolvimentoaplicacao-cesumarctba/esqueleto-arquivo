@@ -2,9 +2,9 @@
 
 class Usuario
 {
-    private $nome;
-    private $email;
-    private $senha;
+    public $nome;
+    public $email;
+    public $senha;
 
     /**
      * Metodo construtor
